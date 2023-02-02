@@ -1,4 +1,6 @@
 import React from 'react'
+// @seo
+import { NextSeo } from 'next-seo'
 // @redux
 import { useGetAlbumsQuery } from '@/lib/store/services/endpoints/album'
 // @mui
@@ -74,24 +76,27 @@ const Album: NextPageWithLayout = () => {
   if (isLoading) return <Loader />
 
   return (
-    <Container>
-      <Box>
-        <ImageList variant="masonry" cols={cols} gap={8}>
-          {albums.map((it: any) => (
-            <ImageListItem
-              key={it.id}
-              sx={{ borderRadius: '4px', overflow: 'hidden' }}
-            >
-              <img
-                src={it.properties['이미지'].files[0].file.url}
-                alt=""
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box>
-    </Container>
+    <>
+      <NextSeo title="ALBUM" />
+      <Container>
+        <Box>
+          <ImageList variant="masonry" cols={cols} gap={8}>
+            {albums.map((it: any) => (
+              <ImageListItem
+                key={it.id}
+                sx={{ borderRadius: '4px', overflow: 'hidden' }}
+              >
+                <img
+                  src={it.properties['이미지'].files[0].file.url}
+                  alt=""
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Box>
+      </Container>
+    </>
   )
 }
 

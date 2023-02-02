@@ -1,4 +1,6 @@
 import React from 'react'
+// @seo
+import { NextSeo } from 'next-seo'
 // @redux
 import { useCreateContactMutation } from '@/lib/store/services/endpoints/contact'
 // @snackbar
@@ -62,6 +64,7 @@ const Contact: NextPageWithLayout = () => {
 
   return (
     <>
+      <NextSeo title="CONTACT" />
       <Box
         sx={{
           background:

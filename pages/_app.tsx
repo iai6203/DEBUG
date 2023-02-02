@@ -3,6 +3,7 @@ import '@fontsource/noto-sans-kr/400.css'
 import '@fontsource/noto-sans-kr/500.css'
 import '@fontsource/noto-sans-kr/700.css'
 import '@/styles/globals.css'
+import { DefaultSeo } from 'next-seo'
 import { StoreProvider } from '@/lib/store'
 import { ThemeProvider } from '@/lib/theme'
 import { SnackbarProvider } from 'notistack'
@@ -22,12 +23,15 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <StoreProvider>
-      <ThemeProvider>
-        <SnackbarProvider maxSnack={3}>
-          {getLayout(<Component {...pageProps} />)}
-        </SnackbarProvider>
-      </ThemeProvider>
-    </StoreProvider>
+    <>
+      <DefaultSeo titleTemplate="DEBUG BAND | %s" />
+      <StoreProvider>
+        <ThemeProvider>
+          <SnackbarProvider maxSnack={3}>
+            {getLayout(<Component {...pageProps} />)}
+          </SnackbarProvider>
+        </ThemeProvider>
+      </StoreProvider>
+    </>
   )
 }
