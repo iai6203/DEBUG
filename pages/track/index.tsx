@@ -1,4 +1,6 @@
 import React from 'react'
+// @seo
+import { NextSeo } from 'next-seo'
 // @redux
 import { useGetTracksQuery } from '@/lib/store/services/endpoints/tracks'
 // @framer
@@ -118,19 +120,22 @@ const Track: NextPageWithLayout = () => {
   if (isLoading) return <Loader />
 
   return (
-    <Container>
-      <Box>
-        <ImageList cols={cols}>
-          {tracks.map((track: any) => (
-            <TrackItem
-              key={track.id}
-              title={track.properties['제목'].title[0].text.content}
-              src={track.properties['앨범 커버 이미지'].files[0].file.url}
-            />
-          ))}
-        </ImageList>
-      </Box>
-    </Container>
+    <>
+      <NextSeo title="TRACK" />
+      <Container>
+        <Box>
+          <ImageList cols={cols}>
+            {tracks.map((track: any) => (
+              <TrackItem
+                key={track.id}
+                title={track.properties['제목'].title[0].text.content}
+                src={track.properties['앨범 커버 이미지'].files[0].file.url}
+              />
+            ))}
+          </ImageList>
+        </Box>
+      </Container>
+    </>
   )
 }
 
