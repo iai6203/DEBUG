@@ -19,11 +19,16 @@ const initialState: State = {
     },
     {
       id: 2,
+      title: 'Track',
+      href: '/track',
+    },
+    {
+      id: 3,
       title: 'Album',
       href: '/album',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Contact',
       href: '/contact',
     },
