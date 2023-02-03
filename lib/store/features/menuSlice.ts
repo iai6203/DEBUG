@@ -29,6 +29,11 @@ const initialState: State = {
     },
     {
       id: 4,
+      title: 'Subscribe',
+      href: '/subscribe',
+    },
+    {
+      id: 5,
       title: 'Contact',
       href: '/contact',
     },
