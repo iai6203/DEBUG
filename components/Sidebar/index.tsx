@@ -10,13 +10,14 @@ const Sidebar = () => {
 
   return (
     <Box
+      component="div"
       sx={{
         width: '290px',
         height: '100%',
         backgroundColor: theme.colors.common.white,
       }}
     >
-      <Box sx={{ py: 5 }}>
+      <Box component="div" sx={{ py: 5 }}>
         <MenuList />
       </Box>
     </Box>

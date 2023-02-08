@@ -26,7 +26,7 @@ const Loading = () => {
         alignItems="center"
         sx={{ height: '100%' }}
       >
-        <Box sx={{ mb: 1, width: '155px', height: '155px' }}>
+        <Box component="div" sx={{ mb: 1, width: '155px', height: '155px' }}>
           <Lottie animationData={subscribeLoading} />
         </Box>
         <Typography variant="h3" sx={{ mb: 1 }}>
@@ -64,7 +64,7 @@ const Success = () => {
         alignItems="center"
         sx={{ height: '100%' }}
       >
-        <Box sx={{ width: '155px', height: '155px' }}>
+        <Box component="div" sx={{ width: '155px', height: '155px' }}>
           <Lottie animationData={subscribeSuccess} />
         </Box>
         <Typography variant="h3" sx={{ mb: 1 }}>

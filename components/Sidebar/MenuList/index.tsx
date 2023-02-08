@@ -20,7 +20,7 @@ const MenuList = () => {
   const theme = useTheme()
 
   return (
-    <Box>
+    <Box component="div">
       <List sx={{ p: 0 }}>
         {menus.map((menu) => (
           <ListItem key={menu.id} sx={{ p: 0 }}>

@@ -66,6 +66,7 @@ const Contact: NextPageWithLayout = () => {
     <>
       <NextSeo title="CONTACT" />
       <Box
+        component="div"
         sx={{
           background:
             'url(/assets/images/overlay_1.svg), url(/assets/images/contact.jpeg)',
@@ -173,7 +174,7 @@ const Contact: NextPageWithLayout = () => {
                 textFieldProps={{ label: '내용', multiline: true, rows: 10 }}
                 error={errors.content}
               />
-              <Box>
+              <Box component="div">
                 <Button
                   type="submit"
                   variant="contained"

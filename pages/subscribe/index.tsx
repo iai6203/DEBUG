@@ -64,6 +64,7 @@ const Subscribe: NextPageWithLayout = () => {
     <>
       <NextSeo title="SUBSCRIBE" />
       <Box
+        component="div"
         sx={{
           background:
             'url(/assets/images/overlay_1.svg), url(/assets/images/subscribe.jpeg)',
@@ -131,7 +132,7 @@ const Subscribe: NextPageWithLayout = () => {
                 }}
                 error={errors.email}
               />
-              <Box>
+              <Box component="div">
                 <Button
                   type="submit"
                   variant="contained"

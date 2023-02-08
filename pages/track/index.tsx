@@ -123,7 +123,7 @@ const Track: NextPageWithLayout = () => {
     <>
       <NextSeo title="TRACK" />
       <Container>
-        <Box>
+        <Box component="div">
           <ImageList cols={cols}>
             {tracks.map((track: any) => (
               <TrackItem
