@@ -34,7 +34,7 @@ const Header = () => {
           sx={{ height: '100%' }}
         >
           {/* Left */}
-          <Box>
+          <Box component="div">
             <MenuList />
             <ToggleSidebarButton />
           </Box>

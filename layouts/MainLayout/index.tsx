@@ -19,7 +19,7 @@ const MainLayout = ({ children }: Props) => {
       <SidebarDrawer>
         <Sidebar />
       </SidebarDrawer>
-      <Box sx={{ pt: '80px', height: '100%' }}>
+      <Box component="div" sx={{ pt: '80px', height: '100%' }}>
         {children}
       </Box>
     </>

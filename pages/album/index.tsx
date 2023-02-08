@@ -79,7 +79,7 @@ const Album: NextPageWithLayout = () => {
     <>
       <NextSeo title="ALBUM" />
       <Container>
-        <Box>
+        <Box component="div">
           <ImageList variant="masonry" cols={cols} gap={8}>
             {albums.map((it: any) => (
               <ImageListItem
